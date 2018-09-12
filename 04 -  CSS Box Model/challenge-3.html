@@ -1,64 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-<!-- 
- 
- 
- -->
- <h1>Burger <br> King</h1>
- 
- 
- <!doctype html>
- <html>
-   
-<body>
-<form action="/your/api" method="">
- 
-  <!-- use a p or other block tag to organize form elements onto lines -->
-  <p>
-    <label>Name</label>
-    <input name="name" type="text" placeholder="Your name">
-  </p>
-  
-  <label>Email</label>
-  <input name="email" type="email">
-  
-  <label>Pet Count</label>
-  <input name="pets">
-  
-  <label>Birthday</label>
-  <input name="birthday">
-  
-  <select name="prefix">
-    <option>Mr</option>
-    <option>Mrs</option>
-    <option>Ms</option>
-    <option>Sir</option>
-    <option>Madam</option>
-    <option>Dr</option>
-    <option>None</option>
-  </select>
-  
-  <!-- Associate labels with form elements with for and id -->
-  <input id="radio-admin" type="radio" name="role" value="Admin"/>
-  <label for="radio-admin">Admin</label>
-  
-  <input type="radio" name="role" value="Editor" />
-  <label>Editor</label>
-  
-  <input type="radio" name="role" value="Contributor" />
-  <label>Contributor</label>
-  
-  <input type="checkbox" name="public">
-  <label>Public Bio</label>
-  
-  <textarea name="bio"></textarea>
-  
-  <label>Upload Image</label>
-  <input name="image" type="file">
-  
-  <label>Self Destruct</label>
-  <input name="self-destruct" type="check">
-  
-  <button type="submit">Submit</button>
+<head>
+    <title>Form</title>
+</head>
+<form action="#" method="post">
+    <div>
+        <label>Name(At least 6 alphanumberic characters)</label>
+        <input name="name" type="text" placeholder="Your Name" autocomplete="off" pattern="[\w\d]{6,}">
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input name="email" type="email" placeholder="name@example.com">
+    </div>
+
+    <div>
+        <label>Pet Count</label>
+        <input name="pets" type="number" placeholder="">
+    </div>
+
+    <div>
+        <label>Birthday</label>
+        <input name="birthday" type="date">
+    </div>
+
+    <div>
+        <label for="previx">Prefix</label>
+        <select name="prefix">
+            <option>Mr</option>
+            <option>Mrs</option>
+            <option>Ms</option>
+            <option>Sir</option>
+            <option>Madam</option>
+            <option>Dr</option>
+            <option>None</option>
+        </select>
+    </div>
+
+    <div>
+        <input id="radio-admin" type="radio" name="role" value="Admin"/>
+        <label for="radio-admin">Admin</label>
+
+        <input id="radio-editor" type="radio" name="role" value="Editor" />
+        <label for="radio-editor">Editor</label>
+
+        <input id="radio-contributor" type="radio" name="role" value="Contributor" />
+        <label for="radio-contributor">Contributor</label>
+    </div>
+
+    <div>
+        <input id="public-bio-checkbox" type="checkbox" name="public" checked>
+        <label for="public-bio-checkbox">Public Bio</label>
+    </div>
+    <div>
+        <textarea name="bio"></textarea>
+    </div>
+    <div>
+        <label>Upload Image</label>
+        <input name="image" type="file" accept="image/*">
+    </div>
+    <div>
+        <label>Self Destruct</label>
+        <input name="self-destruct" type="checkbox" disabled>
+    </div>
+    <button type="submit">Submit</button>
 </form>
-</body>
- </html>
+
+</html>
+
+
+
+<style media="screen">
+div {
+    margin: 8px auto;
+}
+
+input {
+    padding-left: 8px;
+    outline: none;
+
+    border: none;
+    border-bottom: 1px dashed;
+    border-color: rgba(0, 0, 0, 0.25);
+}
+
+input[name="pets"] {
+    width: 35px;
+}
+
+input[name="image"] {
+    border: none;
+}
+
+form {
+    margin-left: 16px;
+}
+</style>
