@@ -1,4 +1,4 @@
-# CSS Layout with Grid 
+# CSS Layout with Grid
 
 Use CSS Grid to define a 2 dimensional grid of cells.
 
@@ -14,19 +14,27 @@ Use CSS Grid to define a 2 dimensional grid of cells.
 
 - Read this article and discuss it with a partner
   - https://webdesign.tutsplus.com/articles/a-comprehensive-introduction-to-grids-in-web-design--cms-26521
-  - Answer the questions below: 
+  - Answer the questions below:
     - What is a grid?
+      - A grid is a basically blueprint where you can place elements in a specified way on your page
     - Why use a grid?
+      - Allows for reliable and well organized content placement
     - What is a unit?, what is a gutter?, what is a column?, what is a field?
-    - Why use 12 columns? 
-    - What is the rule of thirds? Do you think this works? 
+      - Unit is the buildup of a grid, determines the flexibility colummns will have
+      - Gutter is the small whitespace between Units
+      - Column is the space in which content is place, uses up a number of Units
+      - Field are horizontal divisions of content
+    - Why use 12 columns?
+      - Allows the layout to be flexible
+    - What is the rule of thirds? Do you think this works?
+      - It is visually appealing to put visually important objects in a third of the view.  Sometimes
 
-## Identify Grids in teh wild 
+## Identify Grids in teh wild
 
 - Work with a group and identify grids in the sites below
   - Your job is to identify
     - Units
-    - columns 
+    - columns
     - proportions 1/2, 1/3, 1/4, 2/3 + 1/3...
     - Fields
 
@@ -51,29 +59,29 @@ Use CSS Grid to define a 2 dimensional grid of cells.
 19. http://www.gibson.com
 20. https://www.fender.com
 
-- Stretch challenge: 
-  - Study each of the sites above and understand their grid system. Take a screen shot and draw the grid on top. 
+- Stretch challenge:
+  - Study each of the sites above and understand their grid system. Take a screen shot and draw the grid on top.
 
 ## Use CSS Grid
 
-- What is CSS Grid? 
+- What is CSS Grid?
 - Using display grid
 - Define template columns
 - Displaying a grid with grid areas
 
-## In Class Challenges 
+## In Class Challenges
 
-Your job is to try and recreate the grids in the image with html/CSS. You can start by duplicating the code in example-3 folder. 
+Your job is to try and recreate the grids in the image with html/CSS. You can start by duplicating the code in example-3 folder.
 
-Try to recreate each of the images with HTML and CSS. 
+Try to recreate each of the images with HTML and CSS.
 
 ## After Class
 
-The goal is to apply a grid to your personal web site. Don't feel like your grid has to be complicated with many columns in different proportions. It's more important that you have a grid than having a complex grid. 
+The goal is to apply a grid to your personal web site. Don't feel like your grid has to be complicated with many columns in different proportions. It's more important that you have a grid than having a complex grid.
 
 - Design a grid for your site
   - Draw it on paper or use an application like Sketch
-    - Stretch challenge: 
+    - Stretch challenge:
       - Draw three vesions of your grid
       - Consider different columns arrangements using 3 and 4
   - Identify the element that will be the grid container
@@ -84,4 +92,3 @@ The goal is to apply a grid to your personal web site. Don't feel like your grid
 ## Additional Resources
 
 1. https://webdesign.tutsplus.com/articles/a-comprehensive-introduction-to-grids-in-web-design--cms-26521
-
