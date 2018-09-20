@@ -1,34 +1,81 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <title></title>
-  </head>
-  <body>
+    <style media="screen">
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: sans-serif;
+    }
+    .insert {
+        display:flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .insert > input {
+        font-size: 36px;
+        text-align: center;
+        width: 250px;
+        border: 1px black solid;
+        border-radius: 3px;
+    }
+    #calculate {
+        font-size: 21px;
+        width: 250px;
+        border: 1px black solid;
+        border-radius: 3px;
+        padding: 4px;
+    }
+    .value {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: space-between;
+        width: 250px;
+        font-size: 38px;
+        margin: .25em;
+    }
+    span[id] {
+        font-weight: bold;
+    }
+
+
+
+
+    </style>
+</head>
+
+<body>
     <!-- html elements -->
-    
+
     <p>
-      <label for="amount">Bill</label>
-      <input id="amount" type="number" value="0.00">
+        <label for="amount">Bill</label>
+        <input id="amount" type="number" value="0.00">
     </p>
-    
+
     <p>
-      <label for="percent">Tip %</label>
-      <input id="percent" type="number" value="15">
+        <label for="percent">Tip %</label>
+        <input id="percent" type="number" value="15">
     </p>
-    
+
     <button id="calculate">Calculate</button>
-    
+
     <p>
-      <span>Tip:</span>
-      <span id="tip">0.00</span>
+        <span>Tip:</span>
+        <span id="tip">0.00</span>
     </p>
-    
+
     <p>
-      <span>Total:</span>
-      <span id="total">0.00</span>
+        <span>Total:</span>
+        <span id="total">0.00</span>
     </p>
-    
+
     <!-- Scripts -->
     <script src="main.js"></script>
-  </body>
+</body>
+
 </html>
