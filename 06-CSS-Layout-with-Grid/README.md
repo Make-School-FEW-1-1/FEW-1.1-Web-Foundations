@@ -8,7 +8,7 @@ Use CSS Grid to define a 2 dimensional grid of cells.
 1. Identify columns and rows
 1. Define a Grid Parent
 1. Identify chid grid items
-1. create grid columns
+1. Create grid columns
 
 ## Initial Exercise
 
@@ -29,7 +29,11 @@ Use CSS Grid to define a 2 dimensional grid of cells.
     - What is the rule of thirds? Do you think this works?
       - It is visually appealing to put visually important objects in a third of the view.  Sometimes
 
+<<<<<<< HEAD:06 -  CSS Layout with Grid/README.md
 ## Identify Grids in teh wild
+=======
+## Identify Grids in the wild 
+>>>>>>> upstream/master:06-CSS-Layout-with-Grid/README.md
 
 - Work with a group and identify grids in the sites below
   - Your job is to identify
