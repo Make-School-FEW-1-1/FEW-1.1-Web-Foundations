@@ -1,59 +1,68 @@
 <div id="main">
-  
+
 </div>
 
 
 <script src="data.js"></script>
 <script>
-  // -----------------------------------------
-  // Define an Object with Class Syntax
-  
-  // Challenge 5) Look at the user data in data.js. 
-  // Add properties here for each property found
-  // the objects in data. 
-  
-  class User {
-    constructor(first, last, el) {
-      this.first = first;
-      this.last = last;
-      this.el = el;
-      this.setup();
+    // -----------------------------------------
+    // Define an Object with Class Syntax
+
+    // Challenge 5) Look at the user data in data.js.
+    // Add properties here for each property found
+    // the objects in data.
+
+    class User {
+        constructor(prefix, first, last, el, email, rating, high_score, date, image) {
+            this.prefix = prefix;
+            this.first = first;
+            this.last = last;
+            this.el = el;
+            this.email = email
+            this.rating = rating;
+            this.high_score = high_score;
+            this.date = date;
+            this.image = image;
+            this.setup();
+        }
+
+        // Challenge 6) This displays the name it needs to display
+        // the rest of the user data.
+        setup() {
+            this.el.innerHTML =
+                `<article>
+                     <h1>${this.describe()}</h1>
+                     <image src=${this.image}>
+                     <h2>email: ${this.email}<h2>
+                     <p> rating: ${this.rating} high score: ${this.high_score}</p>
+                     <p>joined on: ${this.date}</p>
+                 </article>`;
+        }
+
+        describe() {
+            return `${this.prefix} ${this.first} ${this.last}`;
+        }
     }
-    
-    // Challenge 6) This displays the name it needs to display
-    // the rest of the user data. 
-    setup() {
-      this.el.innerHTML = 
-`<article>
-  <h1>${this.describe()}</h1>
-  <p>more info...</p>
-</article>`;
+
+    // ----------------------------------------
+
+    // This snippet gets the main elements creates new
+    // div element and then creates a user and passes
+    // that new div to the new user.
+
+    const main = document.getElementById('main');
+    // Append a new div element to main and save a refernce in el
+    var el = main.appendChild(document.createElement('div'));
+    // Create a new User instance and pass in the name and el
+    const joeSmith = new User('Mr.', 'Joe', 'Smith', el, 'email@example.com', 3.89, 10211, "2015-12-17 15:43:17", "https://robohash.org/architectoetest.png?size=50x50&set=set1");
+
+    console.log(joeSmith);
+
+    // Challenge 7) For each user in data make a new user
+    // object and an a new DOM element to display that user.
+
+    for (var i in data) {
+        console.log(i);
+        new User(i.prefix, i.first, i.last, el, i.email, i.rating, i.high_score, i.date, i.image);
     }
-    
-    describe() {
-      return `${this.first} ${this.last}`;
-    }
-  }
-  
-  // ----------------------------------------
-  
-  // This snippet gets the main elements creates new 
-  // div element and then creates a user and passes 
-  // that new div to the new user. 
-  
-  const main = document.getElementById('main');
-  // Append a new div element to main and save a refernce in el
-  var el = main.appendChild(document.createElement('div'));  
-  // Create a new User instance and pass in the name and el
-  const joeSmith = new User('Joe', 'Smith', el);
-  
-  console.log(joeSmith);
-  
-  // Challenge 7) For each user in data make a new user 
-  // object and an a new DOM element to display that user. 
-  
-  for (var i in data) {
-    // console.log(data[i]);
-    // Challenge make a user object for each user in data. 
-  }
 </script>
