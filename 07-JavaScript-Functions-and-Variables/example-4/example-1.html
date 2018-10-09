@@ -4,45 +4,66 @@
 <head>
     <title></title>
     <style media="screen">
-    body {
+        body {
         display: flex;
         flex-direction: column;
         align-items: center;
         font-family: sans-serif;
+        max-width: 500px;
+        margin: auto;
     }
+
     .insert {
+        width: 80%;
         display:flex;
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
     }
+
     .insert > input {
         font-size: 36px;
         text-align: center;
-        width: 250px;
-        border: 1px black solid;
+        border: 2px  solid;
         border-radius: 3px;
+        color: rgba(125, 125, 125, 1);
     }
+
     #calculate {
         font-size: 21px;
-        width: 250px;
-        border: 1px black solid;
+        width: 80%;
+        color: rgba(125, 125, 125, 1);
+        border: 2px solid;
         border-radius: 3px;
-        padding: 4px;
+        padding: 8px;
+        margin-top: 1em;
+        margin-bottom: 2em;
     }
+
     .value {
         display: -webkit-flex;
         display: -ms-flex;
         display: flex;
         justify-content: space-between;
-        width: 250px;
+        width: 80%;
         font-size: 38px;
         margin: .25em;
     }
+
+    span {
+    font-weight: lighter;
+    }
+
     span[id] {
         font-weight: bold;
     }
 
+    h2 {
+        width: 80%;
+        margin: 2em 1em 0 1em;
+        font-weight: lighter;
+        border-bottom: solid 1px;
+    }
 
 
 
@@ -52,26 +73,43 @@
 <body>
     <!-- html elements -->
 
-    <p>
+    <p class="insert">
         <label for="amount">Bill</label>
         <input id="amount" type="number" value="0.00">
     </p>
 
-    <p>
+    <p class="insert">
         <label for="percent">Tip %</label>
         <input id="percent" type="number" value="15">
     </p>
 
-    <button id="calculate">Calculate</button>
-
-    <p>
-        <span>Tip:</span>
-        <span id="tip">0.00</span>
+    <p class="insert">
+        <label for="people">Number of People</label>
+        <input id="people" type="number" value="1">
     </p>
 
-    <p>
+    <button id="calculate">Calculate</button>
+
+    <p class="value">
+        <span>Tip:</span>
+        <span id="tip">$0.00</span>
+    </p>
+
+    <p class="value">
         <span>Total:</span>
-        <span id="total">0.00</span>
+        <span id="total">$0.00</span>
+    </p>
+    <h2>
+        Per Person
+    </h2>
+    <p class="value">
+        <span>Tip:</span>
+        <span id="tip-per">$0.00</span>
+    </p>
+
+    <p class="value">
+        <span>Total:</span>
+        <span id="total-per">$0.00</span>
     </p>
 
     <!-- Scripts -->
