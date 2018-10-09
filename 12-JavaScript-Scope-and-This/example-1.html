@@ -25,18 +25,18 @@
   * {
     box-sizing: border-box;
   }
-  
+
   body {
     font-family: Helvetica;
   }
-  
+
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
     width: 210px;
   }
-  
+
   .box {
     color: #fff;
     width: 100px;
@@ -47,7 +47,7 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   .box.selected {
     border: 10px solid rgba(0, 0, 0, 0.25);
   }
@@ -57,35 +57,42 @@
 <script>
   // Get all boxes
   const options = document.getElementsByClassName('box');
-  // For each box 
+  // For each box
   for (var i in options) {
     // Click event listener added to each object
     options[i].onclick = function(e) {
       this.classList.toggle('selected');
     }
   }
-  
+
   const title = document.getElementById('title');
   const titleInput = document.getElementById('title-input');
-  
+
   titleInput.onfocus = function(e) {
     console.log(this, "has focus!");
   }
-  
+
   titleInput.onblur = function(e) {
     console.log(this, "blur!");
   }
-  
+
   titleInput.oninput = function(e) {
     console.log(this.value);
     title.innerHTML = this.value;
   }
-  
-  // Challenges 
-  
+
+  // Challenges
+
   // 1) Add another box
   // 2) Use the focus and blur event to add a class to the input
   // 3) Use the change event to show the item chosen from the select
-  
-</script>
+  const choose = document.querySelector("#choose")
+  const choice = document.querySelector("#choice")
 
+  choose.addEventListener("change", (e) =>{
+      console.log("changed");
+      choice.innerHTML = choose.value;
+  });
+
+
+</script>
